@@ -39,6 +39,11 @@
                         oServiceCollection.AddScoped<MSLearn.Services.IScopedService, MSLearn.Services.ScopedService>();
                         oServiceCollection.AddSingleton<MSLearn.Services.ISingletonService, MSLearn.Services.SingletonService>();
                         oServiceCollection.AddTransient<MSLearn.ServiceLifetimeReporter>();
+
+                        oServiceCollection.AddTransient<AndrewLock.Services.Service1>();
+                        oServiceCollection.AddTransient<AndrewLock.Services.Service2>();
+                        oServiceCollection.AddTransient<AndrewLock.Services.Service3>();
+                        oServiceCollection.AddTransient<AndrewLock.Other.Foo>();
                     })
                     .Build()
             ) { 

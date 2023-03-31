@@ -1,4 +1,4 @@
-﻿namespace AndrewLock.Scrutor.Example.Other
+﻿namespace AndrewLock.Scrutor.Example.Lib.Other
 {
     public interface IBar
     {
