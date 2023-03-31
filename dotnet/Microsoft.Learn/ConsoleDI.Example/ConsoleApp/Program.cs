@@ -4,6 +4,7 @@
     using Microsoft.Extensions.Hosting;
     using System.Threading.Tasks;
     using MSLearn = Microsoft.Learn.ConsoleDI.Example;
+    using AndrewLock = AndrewLock.Scrutor.Example.Services;
 
     internal class Program
     {
@@ -29,21 +30,23 @@
 
         static async Task Main(string[] args)
         {
-            using IHost oHost = Host
-                .CreateDefaultBuilder(args)
-                .ConfigureServices(services =>
-                {// Manual Dependency Injection of eacch Service
-                    services.AddTransient<MSLearn.Services.ITransientService, MSLearn.Services.TransientService>();
-                    services.AddScoped<MSLearn.Services.IScopedService, MSLearn.Services.ScopedService>();
-                    services.AddSingleton<MSLearn.Services.ISingletonService, MSLearn.Services.SingletonService>();
-                    services.AddTransient<MSLearn.ServiceLifetimeReporter>();
-                })
-                .Build();
+            using (
+                IHost oHost = Host
+                    .CreateDefaultBuilder(args)
+                    .ConfigureServices(oServiceCollection =>
+                    {// Manual Dependency Injection of each Service
+                        oServiceCollection.AddTransient<MSLearn.Services.ITransientService, MSLearn.Services.TransientService>();
+                        oServiceCollection.AddScoped<MSLearn.Services.IScopedService, MSLearn.Services.ScopedService>();
+                        oServiceCollection.AddSingleton<MSLearn.Services.ISingletonService, MSLearn.Services.SingletonService>();
+                        oServiceCollection.AddTransient<MSLearn.ServiceLifetimeReporter>();
+                    })
+                    .Build()
+            ) { 
+                ExemplifyServiceLifetime(oHost.Services, "Lifetime 1");
+                ExemplifyServiceLifetime(oHost.Services, "Lifetime 2");
 
-            ExemplifyServiceLifetime(oHost.Services, "Lifetime 1");
-            ExemplifyServiceLifetime(oHost.Services, "Lifetime 2");
-
-            await oHost.RunAsync();
+                await oHost.RunAsync();
+            }
         }
     }
 }

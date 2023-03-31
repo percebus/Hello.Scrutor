@@ -1,4 +1,4 @@
-﻿namespace Microsoft.Learn.ConsoleDI.Example.Services
+﻿namespace Microsoft.Learn.ConsoleDI.Example.Services.Services
 {
     using Microsoft.Extensions.DependencyInjection;
 

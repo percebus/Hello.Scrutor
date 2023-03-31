@@ -1,7 +1,8 @@
-﻿using Microsoft.Learn.ConsoleDI.Example.Services;
-
-namespace Microsoft.Learn.ConsoleDI.Example
+﻿
+namespace Microsoft.Learn.ConsoleDI.Example.Services
 {
+    using Microsoft.Learn.ConsoleDI.Example.Services.Services;
+
     public class ServiceLifetimeReporter
     {
         private readonly ITransientService _transientService;
