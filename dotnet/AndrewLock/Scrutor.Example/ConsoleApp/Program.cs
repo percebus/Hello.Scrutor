@@ -5,7 +5,7 @@ namespace AndrewLock.Scrutor.Example.ConsoleApp
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using System.Threading.Tasks;
-    using MSLearn = Microsoft.Learn.ConsoleDI.Example.Services;
+    using MSLearn = Microsoft.Learn.ConsoleDI.Example;
 
     internal class Program
     {
@@ -32,10 +32,10 @@ namespace AndrewLock.Scrutor.Example.ConsoleApp
             // using IHost oHost = Host.CreateDefaultBuilder(args)
             //     .ConfigureServices(services =>
             //     {// Manual Dependency Injection of eacch Service
-            //         services.AddTransient<ITransientService, TransientService>();
-            //         services.AddScoped<IScopedService, ScopedService>();
-            //         services.AddSingleton<ISingletonService, SingletonService>();
-            //         services.AddTransient<MSLearn.ServiceLifetimeReporter>();
+            //         services.AddTransient<MSLearn.Services.ITransientService, MSLearn.Services.TransientService>();
+            //         services.AddScoped<MSLearn.Services.IScopedService, MSLearn.Services.ScopedService>();
+            //         services.AddSingleton<MSLearn.Services.ISingletonService, MSLearn.Services.SingletonService>();
+            //         services.AddTransient<MSLearn.Services.ServiceLifetimeReporter>();
             //     })
             //     .Build();
 
