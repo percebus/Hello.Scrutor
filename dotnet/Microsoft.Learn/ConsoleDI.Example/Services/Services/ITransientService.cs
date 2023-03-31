@@ -1,8 +1,8 @@
-﻿namespace Microsoft.Learn.ConsoleDI.Example
+﻿namespace Microsoft.Learn.ConsoleDI.Example.Services
 {
     using Microsoft.Extensions.DependencyInjection;
 
-    public interface IExampleTransientService : IReportServiceLifetime
+    public interface ITransientService : IReportServiceLifetime
     {
         ServiceLifetime IReportServiceLifetime.Lifetime => ServiceLifetime.Transient;
     }
