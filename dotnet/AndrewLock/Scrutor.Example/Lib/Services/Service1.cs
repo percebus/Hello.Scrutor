@@ -1,4 +1,4 @@
-﻿namespace AndrewLock.Scrutor.Example.Services
+﻿namespace AndrewLock.Scrutor.Example.Lib
 {
     public class Service1 : IService
     {

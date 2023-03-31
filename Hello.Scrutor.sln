@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndrewLock.Scrutor.Example.Services", "dotnet\AndrewLock\Scrutor.Example\Services\AndrewLock.Scrutor.Example.Services.csproj", "{1B0E6D04-EB7A-4B73-9AD5-BCC04B7B7EAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndrewLock.Scrutor.Example.Lib", "dotnet\AndrewLock\Scrutor.Example\Lib\AndrewLock.Scrutor.Example.Lib.csproj", "{1B0E6D04-EB7A-4B73-9AD5-BCC04B7B7EAF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Learn.ConsoleDI.Example.Services", "dotnet\Microsoft.Learn\ConsoleDI.Example\Services\Microsoft.Learn.ConsoleDI.Example.Services.csproj", "{B0FF38C2-E698-46A0-8940-227F0297A27B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Learn.ConsoleDI.Example.Lib", "dotnet\Microsoft.Learn\ConsoleDI.Example\Lib\Microsoft.Learn.ConsoleDI.Example.Lib.csproj", "{B0FF38C2-E698-46A0-8940-227F0297A27B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Learn.ConsoleDI.Example.ConsoleApp", "dotnet\Microsoft.Learn\ConsoleDI.Example\ConsoleApp\Microsoft.Learn.ConsoleDI.Example.ConsoleApp.csproj", "{6B6BCFD3-169F-4F28-944A-10CAA0740F91}"
 EndProject

@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\AndrewLock\Scrutor.Example\Services\AndrewLock.Scrutor.Example.Services.csproj" />
-    <ProjectReference Include="..\..\..\Microsoft.Learn\ConsoleDI.Example\Services\Microsoft.Learn.ConsoleDI.Example.Services.csproj" />
+    <ProjectReference Include="..\..\..\AndrewLock\Scrutor.Example\Lib\AndrewLock.Scrutor.Example.Lib.csproj" />
+    <ProjectReference Include="..\..\..\Microsoft.Learn\ConsoleDI.Example\Lib\Microsoft.Learn.ConsoleDI.Example.Lib.csproj" />
   </ItemGroup>
 
 </Project>

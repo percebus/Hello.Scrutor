@@ -5,7 +5,7 @@ namespace AndrewLock.Scrutor.Example.ConsoleApp
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using System.Threading.Tasks;
-    using MSLearn = Microsoft.Learn.ConsoleDI.Example;
+    using MSLearn = Microsoft.Learn.ConsoleDI.Example.Lib;
 
     internal class Program
     {
@@ -29,22 +29,6 @@ namespace AndrewLock.Scrutor.Example.ConsoleApp
 
         static async Task Main(string[] args)
         {
-            // using IHost oHost = Host.CreateDefaultBuilder(args)
-            //     .ConfigureServices(services =>
-            //     {// Manual Dependency Injection of eacch Service
-            //         services.AddTransient<MSLearn.Services.ITransientService, MSLearn.Services.TransientService>();
-            //         services.AddScoped<MSLearn.Services.IScopedService, MSLearn.Services.ScopedService>();
-            //         services.AddSingleton<MSLearn.Services.ISingletonService, MSLearn.Services.SingletonService>();
-            //         services.AddTransient<MSLearn.Services.ServiceLifetimeReporter>();
-            //     })
-            //     .Build();
-
-            // ExemplifyServiceLifetime(oHost.Services, "Lifetime 1");
-            // ExemplifyServiceLifetime(oHost.Services, "Lifetime 2");
-
-            // await oHost.RunAsync();
-
-
             var oServiceCollection = new ServiceCollection();
                 oServiceCollection.Scan(oTypeSourceSelector => 
                     oTypeSourceSelector

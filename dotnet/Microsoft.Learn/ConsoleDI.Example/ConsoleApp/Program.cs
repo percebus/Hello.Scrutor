@@ -3,8 +3,8 @@
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using System.Threading.Tasks;
-    using MSLearn = Microsoft.Learn.ConsoleDI.Example;
-    using AndrewLock = AndrewLock.Scrutor.Example.Services;
+    using MSLearn = Microsoft.Learn.ConsoleDI.Example.Lib;
+    using AndrewLock = AndrewLock.Scrutor.Example.Lib;
 
     internal class Program
     {

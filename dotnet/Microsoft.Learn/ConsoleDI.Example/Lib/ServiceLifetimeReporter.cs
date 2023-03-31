@@ -1,7 +1,7 @@
 ﻿
-namespace Microsoft.Learn.ConsoleDI.Example.Services
+namespace Microsoft.Learn.ConsoleDI.Example.Lib
 {
-    using Microsoft.Learn.ConsoleDI.Example.Services.Services;
+    using Microsoft.Learn.ConsoleDI.Example.Lib.Services;
 
     public class ServiceLifetimeReporter
     {

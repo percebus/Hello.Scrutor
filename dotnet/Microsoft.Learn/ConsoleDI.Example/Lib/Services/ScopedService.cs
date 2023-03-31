@@ -1,4 +1,4 @@
-﻿namespace Microsoft.Learn.ConsoleDI.Example.Services.Services
+﻿namespace Microsoft.Learn.ConsoleDI.Example.Lib.Services
 {
     public class ScopedService : IScopedService
     {
