@@ -16,6 +16,7 @@ namespace Microsoft.Learn.ConsoleDI.Example.Lib
             (_transientService, _scopedService, _singletonService) =
                 (transientService, scopedService, singletonService);
 
+
         public void ReportServiceLifetimeDetails(string lifetimeDetails)
         {
             Console.WriteLine(lifetimeDetails);
