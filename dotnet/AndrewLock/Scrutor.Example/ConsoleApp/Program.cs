@@ -15,7 +15,7 @@ namespace AndrewLock.Scrutor.Example.ConsoleApp
                 oServiceCollection
                     .Scan(oTypeSourceSelector => oTypeSourceSelector // Manual
                         .AddTypes<
-                            AndrewLock.Services.Service1, 
+                            AndrewLock.Services.Service1,
                             AndrewLock.Services.Service1>() // FIXME OBSOLETE Use FromTypes instead
                         .AsSelf()
                         .WithTransientLifetime()
