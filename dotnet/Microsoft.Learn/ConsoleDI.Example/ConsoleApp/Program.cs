@@ -36,26 +36,26 @@
                     .CreateDefaultBuilder(args)
                     .ConfigureServices(oServiceCollection =>
                     {// Manual Dependency Injection of each Service
-                        oServiceCollection.AddTransient<MSLearn.Services.ITransientService, MSLearn.Services.TransientService>();
-                        oServiceCollection.AddScoped<MSLearn.Services.IScopedService, MSLearn.Services.ScopedService>();
-                        oServiceCollection.AddSingleton<MSLearn.Services.ISingletonService, MSLearn.Services.SingletonService>();
-                        oServiceCollection.AddTransient<MSLearn.ServiceLifetimeReporter>();
+                        oServiceCollection
+                            .AddTransient<MSLearn.Services.ITransientService, MSLearn.Services.TransientService>()
+                            .AddScoped<MSLearn.Services.IScopedService, MSLearn.Services.ScopedService>()
+                            .AddSingleton<MSLearn.Services.ISingletonService, MSLearn.Services.SingletonService>()
 
-                        oServiceCollection.AddTransient<AndrewLock.Services.Service1>();
-                        oServiceCollection.AddTransient<AndrewLock.Services.Service2>();
-                        oServiceCollection.AddTransient<AndrewLock.Services.Service3>();
-                        oServiceCollection.AddTransient<AndrewLock.Other.Foo>();
+                            .AddTransient<MSLearn.ServiceLifetimeReporter>()
+                            .AddTransient<AndrewLock.Services.Service1>()
+                            .AddTransient<AndrewLock.Services.Service2>()
+                            .AddTransient<AndrewLock.Services.Service3>()
 
+                            .AddTransient<AndrewLock.Other.Foo>()
+                         // .AddTransient<AndrewLock.Services.ITransientService, AndrewLock.Services.TransientService>(); // FIXME
+                            .AddTransient<AndrewLock.Services.IScopedService, AndrewLock.Services.ScopedService>()
 
-                     // oServiceCollection.AddTransient<AndrewLock.Services.ITransientService, AndrewLock.Services.TransientService>(); // FIXME
-                        oServiceCollection.AddTransient<AndrewLock.Services.IScopedService, AndrewLock.Services.ScopedService>();
+                            .AddTransient<AndrewLock.Services.IFooService, AndrewLock.Services.TransientService>()
+                            .AddTransient<AndrewLock.Services.IScopedService, AndrewLock.Services.AnotherService>()
 
-                        oServiceCollection.AddTransient<AndrewLock.Services.IFooService, AndrewLock.Services.TransientService>();
-                        oServiceCollection.AddTransient<AndrewLock.Services.IScopedService, AndrewLock.Services.AnotherService>();
-
-                        oServiceCollection.AddSingleton<AndrewLock.Services.TestService>();                                   // .AsSelf()
-                        oServiceCollection.AddSingleton<AndrewLock.Services.ITestService, AndrewLock.Services.TestService>(); // .AsMatchingInterface()
-                        oServiceCollection.AddSingleton<AndrewLock.Services.IService, AndrewLock.Services.TestService>();     // .AsImplementedInterfaces()
+                            .AddSingleton<AndrewLock.Services.TestService>()                                  // .AsSelf()
+                            .AddSingleton<AndrewLock.Services.ITestService, AndrewLock.Services.TestService>() // .AsMatchingInterface()
+                            .AddSingleton<AndrewLock.Services.IService, AndrewLock.Services.TestService>();    // .AsImplementedInterfaces()
                     })
                     .Build()
             ) { 
