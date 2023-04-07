@@ -40,8 +40,8 @@
                             .AddTransient<MSLearn.Services.ITransientService, MSLearn.Services.TransientService>()
                             .AddScoped<MSLearn.Services.IScopedService, MSLearn.Services.ScopedService>()
                             .AddSingleton<MSLearn.Services.ISingletonService, MSLearn.Services.SingletonService>()
-
                             .AddTransient<MSLearn.ServiceLifetimeReporter>()
+
                             .AddTransient<AndrewLock.Services.Service1>()
                             .AddTransient<AndrewLock.Services.Service2>()
                             .AddTransient<AndrewLock.Services.Service3>()
@@ -53,7 +53,7 @@
                             .AddTransient<AndrewLock.Services.IFooService, AndrewLock.Services.TransientService>()
                             .AddTransient<AndrewLock.Services.IScopedService, AndrewLock.Services.AnotherService>()
 
-                            .AddSingleton<AndrewLock.Services.TestService>()                                  // .AsSelf()
+                            .AddSingleton<AndrewLock.Services.TestService>()                                   // .AsSelf()
                             .AddSingleton<AndrewLock.Services.ITestService, AndrewLock.Services.TestService>() // .AsMatchingInterface()
                             .AddSingleton<AndrewLock.Services.IService, AndrewLock.Services.TestService>();    // .AsImplementedInterfaces()
                     })

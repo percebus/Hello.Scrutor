@@ -31,7 +31,7 @@ namespace AndrewLock.Scrutor.Example.ConsoleApp
                                 .AsImplementedInterfaces()
                                 .WithTransientLifetime()
 
-                            .AddClasses()                                         // 1. Find the concrete classes to  register
+                            .AddClasses()                                             // 1. Find the concrete classes to  register
                                 .UsingRegistrationStrategy(RegistrationStrategy.Skip) // 2. Define how to handle duplicates
                                 .AsSelf()                                             // 2. Specify which services they are registered as
                                 .WithTransientLifetime()                              // 3. Set the lifetime for the services
